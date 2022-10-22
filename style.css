@@ -1,0 +1,200 @@
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgb(100, 200, 105);
+     */
+     background-image: linear-gradient(to right top, #567656, #327160, #006a6e, #00617b, #005580, #175188, #324c8d, #4c448d, #6c4595, #8c4499, #ac4198, #c93d93);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   user-select: none;
+
+    }
+@font-face {
+    font-family: digitel-7;
+    src: url();
+}
+
+.clock{
+    background-color: #fff;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    box-shadow: inset rgb(38, 57, 77) 0px 20px 30px -10px;
+    position: relative;
+}
+
+.frame{
+    background-color: rgb(94, 87, 87);
+    width: 380px;
+    height: 380px;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+
+}
+
+.brand{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    position: absolute;
+    top: 50px;
+    left: 48%;
+    z-index: 4;
+    transform: translate(-48%)
+}
+
+.slogn{
+    font-size: 13px;
+    font-weight: 500;
+    color: #0b0b0b;
+    position: absolute;
+    top: 95px;
+    z-index: 4;
+    left: 48%;
+    transform: translate(-48%)
+
+}
+
+.display{
+    color: white;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(96, 92, 92);
+    font-size: 60px;
+    width: 80%;
+    height: 80px;
+    z-index: 10;
+    position: absolute;
+    top: 150px;
+    left: 40px;
+    border-radius: 50px;
+    
+}
+
+.display div{
+    /* font-family: digital-7; */
+    font-family: 'DS-Digital', sans-serif;
+}
+
+.hrs,.min,.sec,.ms{
+    background-color: rgb(79, 68, 68);
+    width: 30px;
+    text-align: center;
+    
+}
+
+.colon{
+    opacity: 0.2;
+}
+
+.clock.start-animation .colon{
+   animation: blink 0.5s ease infinite;
+}
+
+@keyframes blink{
+    from{
+        opacity: 0.2;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.buttons{
+    z-index: 3;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #006a6e;
+    height: 200px;
+    width: 90%;
+    border-radius: 0 0 180px 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.buttons p{
+    text-transform: uppercase;
+    color: #ddeaee;
+    font-size: 12px;
+    letter-spacing: 1px;
+    background-color: #5d595e;
+    margin-top: 20px;
+  padding-left: 10px;
+  font-weight: 600;
+
+}
+
+.buttons p span{
+    background-color: #fff;
+    color: black;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: inline-block;
+
+}
+
+.start{
+    background-color: rgb(19, 230, 22);
+}
+.stop{
+    background-color: rgb(232, 7, 7);
+}
+.reset{
+    background-color: rgb(14, 28, 227);
+}
+
+.group{
+    margin-top: 30px;
+}
+
+button{
+    outline: 0;
+    border: none;
+    font-size: 18px;
+    color: white;
+    width: 70px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+   transition: all .3s ease-out;
+   cursor: pointer;
+}
+button:active{
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px,
+       rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px,
+         rgba(0, 0, 0, 0.09) 0px 16px 8px,
+         rgba(0, 0, 0, 0.09) 0px 16px 8px,
+         rgba(0, 0, 0, 0.09) 0px 16px 8px,
+         rgba(0, 0, 0, 0.09) 0px 16px 8px,
+         rgba(0, 0, 0, 0.09) 0px 16px 8px,
+         rgba(0, 0, 0, 0.09) 0px 16px 8px,
+         rgba(0, 0, 0, 0.09) 0px 16px 8px,
+         rgba(0, 0, 0, 0.09) 0px 16px 8px,
+          rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+    
+}
+
+.start-active,
+.stop-active{
+pointer-events: none;
+opacity: 0.5;
+}
